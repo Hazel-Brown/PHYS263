@@ -1,4 +1,4 @@
-using Unitful
+using Unitful, Plots, CurveFit
 
 # f1 = 383.5u"Hz"
 
@@ -28,3 +28,9 @@ peaks3 = [5.5, 40, 76.5]
 f4 = missing
 
 peaks4 = [7.5, 41, 77.5]
+
+
+
+
+# fs = 
+

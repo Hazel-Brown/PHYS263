@@ -1,0 +1,194 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{PHYS263 Lab Report 1}
+\author{Hazel Brown\\[1ex]
+\small{Partner: Muz Shah}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Students are often introduced to resonant standing waves simply by creating them manually on a string or slinky. This is effective, but has problems preventing deeper study. We revisited this experiment with a setup that allowed us to control the frequency and tension of a vibrating string with minimal interference of other effects. Data was taken and analyzed with each held constant and the other incremented harmonically. All sets of data were able to derive the known formula $v=\sqrt{\frac{T}{\mu}}$ with at least 95\% confidence.
+\end{abstract}
+
+
+
+\section{Data}
+
+\subsection{Global constants}
+
+$g = 9.81$ m/s$^2$ \\
+$L_{extended} = 149.5 \pm .2$ cm \\
+$m_{string} = 2.33 \pm .005$ g \\
+$\mu = 15.59 \pm .05$ mg/cm \\
+$L = 112.0 \pm .2$ cm
+
+\subsection{Table 1: Constant tension}
+
+$m_{hanging} = 551 \pm 2$ g \\
+$T = mg = 5.40 \pm .02$ N
+
+% \begin{center}
+% \begin{tabular}{ |c|c|c|}
+%     \hline
+%     $n$ & $f$ & $\Delta f$ \\
+%     & (Hz) & (Hz) \\
+%     \hline
+%     1 & 26.5 & 1 \\
+%     \hline
+%     2 & 53 & 1 \\
+%     \hline
+%     3 & 80 & 1 \\
+%     \hline
+%     4 & 107 & 2 \\
+%     \hline
+%     5 & 134.5 & 2 \\
+%     \hline
+%     6 & 161 & 2 \\
+%     \hline
+% \end{tabular}
+% \end{center}
+\begin{center}
+\begin{tabular}{ |c|c||c|c|c|c|c| }
+    \hline
+    $n$ & $f$ & $\lambda=\frac{2L}{n}$ & $1/\lambda$ & $v_{meas}=\lambda f$ & $v_{calc}=\sqrt{T/\mu}$ & $\frac{\Delta v}{v_{calc}}$ \\
+    & (Hz) & (m) & (m$^{-1}$) & (m/s) & (m/s) & (\%) \\
+    \hline
+    1 & $26.5\pm1$ & 2.24 & .446 & 59.36 & 58.88 & .815 \\
+    \hline
+    2 & $53\pm1$ & 1.12 & .893 & 59.36 & 58.88 & .815 \\
+    \hline
+    3 & $80\pm1$ & .747 & 1.34 & 59.76 & 58.88 & 1.47 \\
+    \hline
+    4 & $107\pm2$ & .560 & 1.79 & 59.92 & 58.88 & 1.74 \\
+    \hline
+    5 & $134.5\pm2$ & .448 & 2.23 & 60.26 & 58.88 & 2.34 \\
+    \hline
+    6 & $161\pm2$ & .373 & 2.68 & 60.05 & 58.88 & 1.99 \\
+    \hline
+\end{tabular}
+\end{center}
+
+\includesvg[width=\textwidth]{lab1-graph1.svg} \\
+
+
+\subsection{Table 2: Constant frequency}
+
+$f = 58.0 \pm .05$ Hz
+
+% \begin{center}
+% \begin{tabular}{ |c|c|}
+%     \hline
+%     $n$ & $m$ \\
+%     & (kg) \\
+%     \hline
+%     2 & .662 \\
+%     \hline
+%     3 & .285 \\
+%     \hline
+%     4 & .160 \\
+%     \hline
+%     5 & .100 \\
+%     \hline
+%     6 & .066 \\
+%     \hline
+% \end{tabular}
+% \end{center}
+\begin{center}
+\begin{tabular}{ |c|c||c|c|c|c|c|}
+    \hline
+    $n$ & $m$ & $T=mg$ & $\lambda=\frac{2L}{n}$ & $v_{meas}$ & $v_{calc}$ & $\frac{\Delta v}{v_{calc}}$ \\
+    & (kg) & (N) & (m) & (m/s) & (m/s) & (\%) \\
+    \hline
+    2 & .662 & 6.49 & 1.12 & 65.0 & 64.5 & .648 \\
+    \hline
+    3 & .285 & 2.80 & .747 & 43.3 & 42.3 & 2.31 \\
+    \hline
+    4 & .160 & 1.57 & .560 & 32.5 & 31.7 & 2.36 \\
+    \hline
+    5 & .100 & .981 & .448 & 26.0 & 25.1 & 3.58 \\
+    \hline
+    6 & .066 & 6.47 & .373 & 21.6 & 20.4 & 6.15 \\
+    \hline
+\end{tabular}
+\end{center}
+
+
+
+\includesvg[width=\textwidth]{lab1-graph2.svg} \\
+
+
+\section{Analysis}
+
+Let each $k_d$ or $k_{n,d}$ denote an arbitrary constant of dimension $d$. \\
+
+It is true by definition that $n = \frac{2L}{\lambda}$ and $v = \lambda f$. \\
+
+It is globally controlled that $L = k_L$ and $\mu = k_\mu$. \\
+
+\subsection{From Table \& Graph 1}
+
+Table 1 suggests that constant tension implies constant velocity, and shows with under 2.5\% error that 
+$$v = \sqrt{\frac{T}{\mu}}$$
+
+Analysis of the regression on Graph 1 shows the same, with a slightly larger error margin.
+
+
+
+\subsection{From Table \& Graph 2}
+
+% Graph 2 suggests that $f=58.0$ Hz implies
+% $$\log(v/k_v) = k_1 \log(T/k_F) + k_2$$
+
+% and thus
+% $$v = k_v e^{{k_1} \log(T/k_F) + k_2}$$
+% $$v = k_v e^{k_2} (\frac{T}{k_F})^{k_1}$$
+% $$v = k_{2,v} (\frac{T}{k_{v^2} k_\mu})^{k_1}$$
+% $$v = k_{2,v} \sqrt{\frac{T}{k_{v^2} k_\mu}} (\frac{T}{k_{2,F}})^{k_3}$$
+% $$v = k_4 \sqrt{\frac{T}{k_\mu}} (\frac{T}{k_{2,F}})^{k_3}$$
+
+% and seeing that $\mu$ is constant, 
+% $$v = k_5 \sqrt{\frac{T}{\mu}} (\frac{T}{k_{2,F}})^{k_3}$$
+
+% which proves
+% $$v = \sqrt{\frac{T}{\mu}}$$
+
+% as soon as it is proven that $k_5 = 1$ and $k_1 = \frac{1}{2}$. \\
+
+% Substituting the empirical value $k_1 = 0.4913$ confirms the latter with 1.8\% error. \\
+
+
+
+
+Graph 2 suggests that constant frequency implies
+$$\log(\frac{v}{1\si{m/s}}) = 0.4913 \log(\frac{T}{1\si{N}}) + 3.273$$
+
+and thus
+$$v = 1\si{m/s} \cdot e^{{0.4913} \log(T/1\si{N}) + 3.273}$$
+$$v = 1\si{m/s} \cdot e^{3.273} (\frac{T}{1\si{N}})^{0.4913}$$
+$$26.39\si{m/s} \sqrt{\frac{T}{1\si{N}}} (\frac{T}{1\si{N}})^{0.0086}$$
+$$26.39\si{m/s} \sqrt{\frac{T}{641.4\si{m^2/s^2} \cdot \mu}} (\frac{T}{1\si{N}})^{0.0086}$$
+$$1.041 \cdot \sqrt{\frac{T}{\mu}} (\frac{T}{1\si{N}})^{0.0086}$$
+
+which is within 5\% error of
+$$v = \sqrt{\frac{T}{\mu}}$$
+
+The value of $\frac{\Delta v}{v_{calc}}$ in Table 2 essentially confirms the same, with some inconsistency in error margin.
+
+\end{document}
