@@ -1,0 +1,158 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{svg}
+
+\title{PHYS263 Lab 2}
+\author{Hazel Brown\\[1ex]
+\small{Partner: Muz Shah}}
+\date{September 20, 2024}
+
+\begin{document}
+
+\maketitle
+
+\setlength\parindent{0pt}
+
+\begin{abstract}
+    Resonant behavior in a half-open column of air is defined by the closed end being a node and the open end an antinode. This allows for a discrete sequence of resonant lengths for each frequency, related but not identical to the harmonic series. In this lab we examined the exact relationship therein, and found our initial formula was accurate but requires an additional term for end correction. Our data produces the speed of sound with 97\% accuracy.
+\end{abstract}
+
+\section{Data}
+
+$T_{room} = \SI{24.5}{\celsius} = \SI{297.5}{K}$
+
+\vspace{4pt}
+
+\begin{tabular}{|c|c|c|c||c|c|c|c|c|c|}
+    \hline
+    $f$ & $L_1$ & $L_2$ & $L_3$ & $\Delta L_1$ & $\Delta L_2$ &  $\lambda=2\Delta L_1$ & $v=\lambda f$ \\
+    $(\si{Hz})$ & $(\si{cm})$ & $(\si{cm})$ & $(\si{cm})$ &$(\si{cm})$ & $(\si{cm})$ & $(\si{cm})$ & $\si{m/s}$ \\
+    \hline
+    383.0 & 7.5 & 53.5 &  & 46 &  & 92 & 352.4 \\
+    \hline
+    440.8 & 4.5 & 41.5 & 67 & 37 & 25.5 & 74 & 326.2 \\
+    \hline
+    480.4 & 5.5 & 40 & 76.5 & 34.5 & 36.5 & 69 & 331.5 \\
+    \hline
+     ?     & 7.5 & 41 & 77.5 & 33.5 & 36.5 & 67 & ? \\
+    \hline
+
+\end{tabular} \\
+
+$v_{mean} = \SI{336.7}{m/s}$
+
+$f_{unknown} \approx v_{mean} / \lambda = \SI{502.5}{Hz}$
+
+$v_{calc} = \SI{331.3}{m/s} \sqrt{\frac{\SI{297.5}{K}}{\SI{273}{K}}} = \SI{345.8}{m/s}$
+
+$v_{calc} / v_{mean} = 2.71\%$
+
+\includesvg[width=\textwidth]{lab2-graph1.svg}
+
+\includesvg[width=\textwidth]{lab2-graph2.svg}
+
+\section{Analysis}
+
+\subsection{Calculating speed with limited data}
+
+Universally, 
+$$v = \lambda f$$
+and in this application,
+$$L = \frac{\lambda}{4}(2n+1)$$
+thus
+$$v = \frac{4}{2n+1}Lf$$
+Hence, if only one pair $(f,L)$ can be found, the speed of sound could still be narrowed to a discrete list of possible values depending on $n$, and if $n$ can be deduced from other information, $v$ could be solved exactly.
+
+\subsection{End correction}
+
+The actual values of $(L_1, L_2)$ contradict the assumption that $L_2 = 3L_1$. This might be explained by the end antinode being not at $L=0$ but at some $L=-E$ past the open end of the tube.
+
+\vspace{8pt}
+
+\begin{tabular}{|c||c|}
+\hline
+$f$ & $E = \frac{\lambda}{4} - L_1$ \\
+$(\si{Hz})$ & $(\si{cm})$ \\
+\hline
+383.0 & 15.5 \\
+\hline
+440.8 & 14.0 \\
+\hline
+480.4 & 12.0 \\
+\hline
+502.5 & 9.0 \\
+\hline
+\end{tabular}
+
+\vspace{8pt}
+
+The formula in the previous section should thus be corrected to
+
+$$v = \frac{4}{2n+1}(L+E)f$$
+
+which is not solvable under the given constraints, but could be if a formula for $E$ were found that did not depend on multiple $L$.
+
+%\section{Notes}
+
+% \begin{itemize}
+%     \item Data for $L_3$ was initially taken, and it causes noticeable quality issues in later calculations. While this does not justify its omission, there are 
+% \end{itemize}
+
+
+
+
+
+% Inherently,
+
+% $$v = f_1 \lambda_1 = \ldots = f_n \lambda_n$$
+
+% and
+
+% $$\lambda_k = 2(L_{2,k} - L_{1,k})$$
+
+% $$\lambda_k = 2(R_k - L_k)$$
+
+
+% $$\begin{bmatrix}
+% v \\ \vdots \\ v
+% \end{bmatrix} = \begin{bmatrix}
+%     \lambda_1 \ldots \lambda_n
+% \end{bmatrix} \begin{bmatrix}
+%     R_1 - L_1 \\ \vdots \\ R_n - L_n
+% \end{bmatrix}$$
+
+% $$nv = \mathbf{f} \cdot (\mathbf{L_2} - \mathbf{L_1})$$
+
+% $$nv = \mathbf{f} \cdot \mathbf{L_2} - \mathbf{f} \cdot \mathbf{L_1}$$
+
+% $$nv = \mathbf{f} \cdot \mathbf{L_2} - \mathbf{f} \cdot \mathbf{L_1}$$
+
+
+% $$v = 2f_1(L_{1,2} - L_{1,1}) = 2f_2(L_{2,2} - L_{2,1})$$
+% so
+
+% $$3v = $$
+
+
+
+
+
+
+% $$v^2 = 4f_1 f_2 (L_{1,2} L_{2,2} + L_{1,1}L_{2,1} - L_{1,1}L_{2,2} - L_{1,2}L_{2,1})$$
+
+% $$\frac{v^2}{4f_1 f_2} - L_{1,1}L_{2,1} = L_{1,2} L_{2,2} - L_{1,1}L_{2,2} - L_{1,2}L_{2,1}$$
+
+
+% $$\frac{f_1}{f_2} = \frac{\lambda_2}{\lambda_1}$$
+
+% $$\frac{f_1}{f_2} \frac{L_{1,2} - L_{1,1}}{L_{2,2} - L_{2,1}} = 1$$
+
+% $$\frac{f_1}{f_2} (L_{1,2} - L_{1,1}) = L_{2,2} - L_{2,1}$$
+
+% $$L_{1,2}$$
+
+
+
+\end{document}
