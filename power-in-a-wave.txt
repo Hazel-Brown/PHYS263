@@ -1,8 +1,0 @@
-dK = 1/2 mu dx v^2
-
-v = - A w cos(kx - wt)
-
-dK = 1/2 mu dx A^2 w^2 cos(kx - wt)^2
-
-
-
