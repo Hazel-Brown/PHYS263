@@ -1,0 +1,9 @@
+Latest: Distance (m),Latest: Radiation (Counts),Latest: Corrected Radiation (counts/int),,,,,0.1 (Aluminum)
+0.1 (1 layer),38,32.8,,,,,0.2 (Cardboard)
+0.2 (1 layer),92,86.8,,,,,0.3 (Glass)
+0.3 (1 layer),23,17.8,,,,,0.4 (Lead)
+0.4 (1 layer),19,13.8,,,,,
+0.3 (2 layer),8,2.8,,,,,
+0.1 (2 layer),16,10.8,,,,,
+0.2 (2 layer),72,66.8,,,,,
+0.4 (2 layer),8,2.8,,,,,
